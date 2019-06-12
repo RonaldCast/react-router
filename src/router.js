@@ -9,11 +9,33 @@ import Product from "./components/Product";
 const configRouter = () => (
   <App>
     <Switch>
-      <Route path="/" component={Home} />
-      <Route path="/category" component={Home} />
-      <Route path="/producto" component={Home} />
+      <Route exact path="/" component={Home} />
+      <Route exact path="/category" component={Category} />
+      <Route exact path="/product" component={Product} />
     </Switch>
   </App>
 );
 
 export default configRouter;
+
+/*
+Path and Match 
+
+* match.url. Una cadena que devuelve la parte 
+  coincidente de la URL. Esto es 
+  particularmente útil para construir <Link> anidados
+
+* match.path: devuelve un string the la ruta, que es 
+  Route path=""
+
+* match.isExact. Un valor booleano que devuelve 
+  verdadero si la
+  coincidencia fue exacta (sin ningún carácter final).
+
+* match.params. Un objeto que contiene pares
+  clave / valor de 
+  la URL analizada por el paquete Path-to-RegExp.
+  
+ Me quede en Switch component
+*
+*/
