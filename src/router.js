@@ -10,8 +10,8 @@ const configRouter = () => (
   <App>
     <Switch>
       <Route exact path="/" component={Home} />
-      <Route exact path="/category" component={Category} />
-      <Route exact path="/product" component={Product} />
+      <Route path="/category" component={Category} />
+      <Route path="/product" component={Product} />
     </Switch>
   </App>
 );
