@@ -1,17 +1,25 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 
 import App from "./App";
 import Category from "./components/Category";
 import Home from "./components/Home";
 import Product from "./components/Product";
 
+const isAuthenticated = () => {
+  let bool = JSON.parse(localStorage.getItem("auth"));
+  console.log(bool);
+  return bool;
+};
+let AuthRoute = props =>
+  isAuthenticated() === true ? <Route {...props} /> : <Redirect to="/" />;
+
 const configRouter = () => (
   <App>
     <Switch>
       <Route exact path="/" component={Home} />
-      <Route path="/category" component={Category} />
-      <Route path="/product" component={Product} />
+      <AuthRoute path="/category" component={Category} />
+      <AuthRoute path="/product" component={Product} />
     </Switch>
   </App>
 );

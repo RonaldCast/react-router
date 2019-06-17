@@ -7,6 +7,7 @@ class CategoryNestes extends Component {
       he: ""
     };
   }
+
   render() {
     const name = this.props.match.params.name;
     return (
