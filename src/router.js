@@ -5,6 +5,7 @@ import App from "./App";
 import Category from "./components/Category";
 import Home from "./components/Home";
 import Product from "./components/Product";
+import NotRouter from "./components/NotFound";
 
 const isAuthenticated = () => {
   let bool = JSON.parse(localStorage.getItem("auth"));
@@ -20,6 +21,7 @@ const configRouter = () => (
       <Route exact path="/" component={Home} />
       <AuthRoute path="/category" component={Category} />
       <AuthRoute path="/product" component={Product} />
+      <Route component={NotRouter} />
     </Switch>
   </App>
 );

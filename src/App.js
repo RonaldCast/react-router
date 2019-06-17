@@ -4,8 +4,13 @@ import { Link } from "react-router-dom";
 import Content from "./components/Content";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
   render() {
     const { children } = this.props;
+    //attribute match
     return (
       <div>
         <header>
@@ -21,6 +26,7 @@ class App extends Component {
             </li>
           </ul>
         </header>
+        <section />
         <Content body={children} />
       </div>
     );
