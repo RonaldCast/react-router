@@ -9,7 +9,7 @@ class Category extends Component {
   render() {
     return (
       <div>
-        <h1>Category</h1>
+        <h1>Category Partner</h1>
         <Switch>
           <Route exact path="/category" component={CategoryFull} />
           <Route path="/category/:name" component={CategoryNested} />

@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+
+import Content from "./components/Content";
+
 class App extends Component {
   render() {
+    const { children } = this.props;
     return (
       <div>
         <header>
@@ -17,7 +21,7 @@ class App extends Component {
             </li>
           </ul>
         </header>
-        <h1>Hello word</h1>
+        <Content body={children} />
       </div>
     );
   }

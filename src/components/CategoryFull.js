@@ -4,7 +4,7 @@ class CategoryFull extends Component {
   render() {
     return (
       <div>
-        <h1>CategoryFull</h1>
+        <h2>CategoryFull</h2>
       </div>
     );
   }

@@ -8,10 +8,10 @@ class CategoryNestes extends Component {
     };
   }
   render() {
-    const number = this.props.match.params.name;
+    const name = this.props.match.params.name;
     return (
       <div>
-        <h1>Children {number}</h1>
+        <h1>Children {name} </h1>
       </div>
     );
   }
